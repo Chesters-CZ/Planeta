@@ -8,17 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30584098-416b-4f70-906e-a32c3b93e2d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Planeta/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Planeta/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Planeta/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Planeta/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Planeta/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hooman.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Planeta.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Planeta.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zemne.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Planeta/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Planeta/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hooman.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hooman.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zemne.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zemne.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665126695000</updated>
-      <workItem from="1665126699986" duration="6257000" />
+      <workItem from="1665126699986" duration="9180000" />
     </task>
     <servers />
   </component>

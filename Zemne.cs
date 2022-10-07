@@ -23,6 +23,7 @@ public class Zemnje
 
     public void Spin()
     {
+        Random random = new Random();
         age++;
         List<Hooman> deti = new List<Hooman>();
 
@@ -45,18 +46,27 @@ public class Zemnje
         Console.WriteLine("Pářim lidi...");
         for (int i = 0; i < populace.Count; i++)
         {
-            Hooman h = populace[i];
-
-
-            for (int j = 0; j < populace.Count; j++)
+            for (int j = i + 1; j < populace.Count; j++)
             {
-                var k = populace[j];
-                if (k.Gender != h.Gender && k.Plodnost && h.Plodnost && h.Age > 18 && k.Age > 18 &&
-                    new Random().Next() > 0.999)
+                // strašně moc nested ifů kvůli optimalizaci
+                if (random.NextSingle() > 0.97)
                 {
-                    Hooman babi = new Hooman(0);
-                    // Console.WriteLine(k.Name + " (" + k.Age + ") a " + h.Name + " (" + h.Age + ") se narodilo " + babi.Name + "(" + babi.Gender + ")");
-                    deti.Add(babi);
+                    if (random.NextSingle() > 0.97)
+                    {
+                        if (populace[j].Plodnost && populace[i].Plodnost)
+                        {
+                            if (populace[j].Gender != populace[i].Gender)
+                            {
+                                if (populace[i].Age > 18 && populace[j].Age > 18)
+                                {
+                                    //Hooman babi = new Hooman(0);
+                                    // Console.WriteLine(k.Name + " (" + k.Age + ") a " + h.Name + " (" + h.Age + ") se narodilo " + babi.Name + "(" + babi.Gender + ")");
+                                    //deti.Add(babi);
+                                    deti.Add(new Hooman(0));
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -78,25 +88,18 @@ public class Zemnje
         try
         {
             Console.WriteLine("Lidem je průměrně " + getAvgPopsAge() + " a průměrnému člověkovi je " + getMedPopsAge());
-        }
-        finally
-        {
-        }
+        }catch{}
+
         try
         {
-            Console.WriteLine("Chlapů je " + getChlapCount() + " a žen je " + getZenaCount());
-        }
-        finally
-        {
-        }
+            Console.WriteLine("Chlapů je " + getChlapCount() + " a žen je " + getZenaCount() + ". Celkem je jich " +
+                              populace.Count);
+        }catch{}
 
         try
         {
             Console.WriteLine("Lidijo se průměrně dožívaj " + deathAges.Average());
-        }
-        finally
-        {
-        }
+        }catch{}
 
         Thread.Sleep(1500);
     }

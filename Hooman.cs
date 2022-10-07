@@ -7,25 +7,19 @@ public class Hooman
     private String name;
     private readonly bool gender;
     private int age;
-    private bool plodnost = true;
+    private bool plodnost;
 
     public bool Gender => gender;
     public string Name => name;
     public int Age => age;
     public bool Plodnost => plodnost;
 
-    public Hooman(String n, bool g)
-    {
-        name = n;
-        gender = g; // isChlap
-        age = 0;
-    }
-
     public Hooman(int age)
     {
         name = randomMeno(3);
         gender = new Random().NextSingle() > 0.5;
         this.age = age;
+        plodnost = true;
     }
     
     public Hooman()
@@ -33,6 +27,7 @@ public class Hooman
         name = randomMeno(3);
         gender = new Random().NextSingle() > 0.5;
         this.age = new Random().Next(0, 99);
+        plodnost = new Random().NextSingle() > 0.5;
     }
     
     private string randomMeno(int wordSize)
@@ -55,11 +50,11 @@ public class Hooman
     public bool BdayMoment()
     {
         age++;
-        if (new Random().NextSingle() * age / 10 > 0.75)
+        if (new Random().NextSingle() * age / 100 > 0.75)
         {
             plodnost = false;
         }
         
-        return new Random().NextSingle() * age / 100 > 0.25;
+        return new Random().NextSingle() * age / 100 > 0.05;
     }
 }
